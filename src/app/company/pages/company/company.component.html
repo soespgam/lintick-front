@@ -1,0 +1,62 @@
+<div class="row margin-page">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-10 offset-1">
+
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Listado de Compañias</h3>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary" (click)="createCompany()">Nuevo</button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-light"
+                            (click)="redirect.redirect('/home/home')">Menu</button>
+                    </div>
+                    
+                    <div class="col-2">
+                        <button type="button" class="btn btn-light" (click)="logout.logouth()">Log Out</button>
+                    </div>
+                </div>
+                <div class="row  margin-page">
+                    <div class="col-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre de Compañia</th>
+                                    <th scope="col">Correo Electronico</th>
+                                    <th scope="col">Pagina Web</th>
+                                    <th scope="col">Logo</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr *ngFor="let item of listCompanies">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.email }}</td>
+                                    <td>{{ item.web_site }}</td>
+                                    <td>{{ item.logo }}</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" (click)="updateCompany(item)"
+                                                    class="btn btn-primary">Editar</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-danger"
+                                                    (click)="deleteCompany(item.id!)">Eliminar</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

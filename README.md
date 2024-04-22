@@ -1,10 +1,14 @@
-# LintickFront
+# Usuario Inicial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+email: admin@admin.com </br>
+password: password
 
-## Development server
+# Descarga y compilacion de proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Esta parte de proyecto es el front-end , posterior a la descarga o clonacion es necesario lanzar el coando npm install para que se instalen las dependencias neesarias para el proyecto.
+
+posterior ,para  la compilacion se ejecuta el comando npm run start y se habilitara la navagacion por la siguiente url http://localhost:4200/
+
 
 ## Code scaffolding
 

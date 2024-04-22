@@ -1,0 +1,47 @@
+<div class="row margin-page">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>{{editState !=='true' ? 'Crear': 'Editar'}} Compañia</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <form [formGroup]="companyForm" (ngSubmit)="action()">
+                        <div class="col-12">
+                            <input class="form-control" type="text" formControlName="name"
+                                placeholder="Nombre de la Compañia">
+                        </div>
+                        <div class="col-12">
+                            <input class="form-control" type="text" formControlName="email"
+                                placeholder="Email de la Compañia">
+                        </div>
+                        <div class="col-12">
+                            <input class="form-control" type="text" formControlName="logo"
+                                placeholder="Logo de la Compañia">
+                        </div>
+                        <div class="col-12">
+                            <input class="form-control" type="text" formControlName="web_site"
+                                placeholder="Web site de la Compañia">
+                        </div>
+                        <div class="col-12 button-div">
+                            <div class="row">
+                                <div class="col-4 offset-1">
+                                    <button type="button" [disabled]="companyForm.invalid" (click)="action()"
+                                        class="btn btn-primary">{{editState !=='true' ? 'Crear': 'Editar'}}</button>
+                                </div>
+                                <div class="col-4 offset-1">
+                                    <button type="button" (click)="back()" class="btn btn-light">Atrás</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="row margin-page">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-10 offset-1">
+
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Listado de Empleados</h3>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary" (click)="createEmployee()">Nuevo</button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-light" (click)="redirect.redirect('/home/home')">Menu</button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-light" (click)="logout.logouth()">Log Out</button>
+                    </div>
+                </div>
+                <div class="row  margin-page">
+                    <div class="col-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Correo Electronico</th>
+                                    <th scope="col">Nombre de la compañia</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr *ngFor="let item of listEmployees">
+                                    <td>{{ item.full_name}}</td>
+                                    <td>{{ item.email }}</td>
+                                    <td>{{ item.company_name}}</td>
+                                    <td>{{ item.rol}}</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" (click)="updateEmployee(item)"
+                                                    class="btn btn-primary">Editar</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-danger"
+                                                (click)="deleteEmployee(item.id!)"  >Eliminar</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
